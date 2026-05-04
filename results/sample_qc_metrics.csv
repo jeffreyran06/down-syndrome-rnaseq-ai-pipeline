@@ -1,0 +1,9 @@
+sample,library_size,detected_features,karyotype
+S1,30413,1000,disomic
+S2,29765,1000,disomic
+S3,30277,1000,disomic
+S4,30349,1000,disomic
+S5,30026,1000,trisomic
+S6,29881,1000,trisomic
+S7,29755,1000,trisomic
+S8,29608,1000,trisomic

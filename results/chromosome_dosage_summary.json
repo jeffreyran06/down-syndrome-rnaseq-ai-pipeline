@@ -1,0 +1,8 @@
+{
+  "available": true,
+  "n_chr_features": 80,
+  "median_chr_log2fc": 0.08900170641656313,
+  "median_non_chr_log2fc": -0.0075533135381902206,
+  "chr_lfc_mannwhitney_pvalue": 0.034328116304946844,
+  "sample_score_ttest_pvalue": 0.044757874735248844
+}

@@ -1,0 +1,52 @@
+project:
+  name: down_syndrome_trisomic_vs_disomic_msc
+  organism: human
+  genome_build: GRCh38
+
+input:
+  counts_file: results/star_salmon/salmon.merged.gene_counts.tsv
+  metadata_file: data/sample_metadata.csv
+  gene_annotation_file: data/gene_annotation.tsv
+  gene_sets_gmt: data/gene_sets.gmt
+  transcript_to_gene_file: data/tx2gene.tsv
+
+columns:
+  sample_id: sample
+  condition: karyotype
+  case_level: trisomic
+  control_level: disomic
+  batch_columns: []
+  covariates: []
+  pair_column:
+
+analysis:
+  output_dir: results
+  min_total_counts: 10
+  min_samples_expressed: 2
+  fdr_threshold: 0.05
+  log2fc_threshold: 1.0
+  top_variable_genes: 5000
+  chromosome_of_interest: "21"
+  marker_sets:
+    pluripotency:
+      - POU5F1
+      - SOX2
+      - NANOG
+      - LIN28A
+      - DPPA4
+    mesenchymal_stem_cell:
+      - THY1
+      - ENG
+      - NT5E
+      - PDGFRA
+      - VIM
+      - COL1A1
+      - COL1A2
+      - DCN
+      - LUM
+    neural_crest_mesenchymal:
+      - SOX9
+      - TWIST1
+      - SNAI2
+      - CDH2
+
